@@ -1,0 +1,81 @@
+/* Popup container */
+.saInformerPopup {
+    position: relative;
+    /*display: inline-block;*/
+    display: block !important;
+    cursor: pointer;
+}
+/* The actual popup (appears on top) */
+.saInformerPopup .saInformerPopupText {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 10000;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.saInformerPopup .saInformerPopupText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.saInformerPopup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+.saInformerPopupText span {
+    display: inline-block;
+}
+.saInformerPopupText .saInformerPopupConfidence {
+    display: none;
+    border-top: 1px solid white;
+    padding: 5px 0;
+}
+.saInformerPopupText .saInformerPopupConfidence.show  {
+    display: inline-block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+.saInformerPopupText.bottom {
+    bottom: auto;
+    /*top: -12px;*/
+}
+.saInformerPopup .saInformerPopupText.bottom::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    top: -10px;
+    border-color: transparent transparent rgb(85, 85, 85);
+}
+.saInformerPopup .saInformerPopupText.bottom::after{
+    display: none;
+}

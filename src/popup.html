@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<head>
+    <title id="speechAssistantOptions">Speech Assistant options</title>
+    <style>
+        body {
+            background: #fffed2;
+        }
+        .container {
+            min-width: 100px;
+            text-align: center;
+            padding: 5px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .container div {
+            margin: 5px;
+            font-size: 1rem;
+        }
+        div#speechAssistantForSiteTitle, div#speechAssistantForSiteLangTitle, div#speechAssistantForSite {
+            color: #565656;
+            text-align: left;
+            font-size: small;
+        }
+        div#speechAssistantForSiteLang {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        div#speechAssistantForSiteLang:hover {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="speechAssistantForSite"></div>
+    <div id="speechAssistantForSiteName"></div>
+    <div id="speechAssistantForSiteLangTitle"></div>
+    <div id="speechAssistantForSiteLang"></div>
+    <div id="speechAssistantForSiteTitle">Speech Assistant</div>
+    <div><button id="switchSA" class="btn success">Enabled</button></div>
+</div>
+<script src="langlist.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

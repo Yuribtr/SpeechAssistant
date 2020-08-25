@@ -1,0 +1,70 @@
+{
+  "extName": {
+    "message": "Голосовой помощник",
+    "description": "Название расширения."
+  },
+  "extTitle": {
+    "message": "Голосовой помощник - распознавание голоса",
+    "description": "Подсказка, показіваемая при наведении на кнопку расширения."
+  },
+  "optionsSaved": {
+    "message": "Настройки сохранены!"
+  },
+  "microphoneOn": {
+    "message": "Микрофон включен"
+  },
+  "lowQuality": {
+    "message": "Низкое качество распознавания!"
+  },
+  "errNoSpeech": {
+    "message": "Речь не распознана"
+  },
+  "errAborted": {
+    "message": "Распознавание было отменено"
+  },
+  "errAudioCapture": {
+    "message": "Не удалось записать звук"
+  },
+  "errNetwork": {
+    "message": "Ошибка работы с сетью"
+  },
+  "errNotAllowed": {
+    "message": "В браузере не разрешено использование микрофона"
+  },
+  "errServiceNotAllowed": {
+    "message": "Сервис распознования речи не работает"
+  },
+  "errBadGrammar": {
+    "message": "Грамматическая ошибка"
+  },
+  "errLanguageNotSupported": {
+    "message": "Выбранный язык распознования не поддерживается"
+  },
+  "speechAssistantOptions": {
+    "message": "Настройки голосового помощника"
+  },
+  "warningPanelColor": {
+    "message": "Цвет панели предупреждения"
+  },
+  "recognizedLanguage": {
+    "message": "Язык распознавания"
+  },
+  "save": {
+    "message": "Сохранить"
+  },
+  "speechAssistantForSite": {
+    "message": "Сайт"
+  },
+  "speechAssistantForSiteTitle": {
+    "message": "Голосовой Помощник"
+  },
+  "speechAssistantForSiteLangTitle": {
+    "message": "Язык распознавания"
+  },
+  "enabled": {
+    "message": "Включен"
+  },
+  "disabled": {
+    "message": "Выключен"
+  }
+}

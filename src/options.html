@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head><title id="speechAssistantOptions">Speech Assistant options</title></head>
+<style>
+    .section {
+        padding: 5px;
+    }
+    #status {
+        color: green;
+    }
+</style>
+<body>
+
+<div class="section">
+    <div id="warningPanelColor">Warning panel color:</div>
+<select id="color">
+    <option value="DarkOrchid" style="background: DarkOrchid;">DarkOrchid</option>
+    <option value="ForestGreen" style="background: ForestGreen;">ForestGreen</option>
+    <option value="RoyalBlue" style="background: RoyalBlue;">RoyalBlue</option>
+</select>
+</div>
+
+<div class="section">
+    <div id="recognizedLanguage">Recognized language:</div>
+<select id="select_language">
+</select>&nbsp;&nbsp; <select id="select_dialect">
+</select>
+</div>
+
+<div class="section">
+<button id="save">Save</button>&nbsp;&nbsp;<span id="status"></span>
+</div>
+
+<script src="langlist.js"></script>
+<script src="options.js"></script>
+
+</body>
+</html>

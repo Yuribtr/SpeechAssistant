@@ -1,0 +1,70 @@
+{
+  "extName": {
+    "message": "Speech Assistant",
+    "description": "The name of extension."
+  },
+  "extTitle": {
+    "message": "Speech Assistant - voice recognition",
+    "description": "Hint, that showed when hovering extension button."
+  },
+  "optionsSaved": {
+    "message": "Options saved!"
+  },
+  "microphoneOn": {
+    "message": "Microphone On"
+  },
+  "lowQuality": {
+    "message": "Low quality of speech detection!"
+  },
+  "errNoSpeech": {
+    "message": "No speech was detected"
+  },
+  "errAborted": {
+    "message": "Speech input was aborted"
+  },
+  "errAudioCapture": {
+    "message": "Audio capture failed"
+  },
+  "errNetwork": {
+    "message": "Network communication failed"
+  },
+  "errNotAllowed": {
+    "message": "Browser disallowed microphone usage"
+  },
+  "errServiceNotAllowed": {
+    "message": "Wrong speech recognition service"
+  },
+  "errBadGrammar": {
+    "message": "Grammar error"
+  },
+  "errLanguageNotSupported": {
+    "message": "Language is not supported"
+  },
+  "speechAssistantOptions": {
+    "message": "Speech Assistant options"
+  },
+  "warningPanelColor": {
+    "message": "Warning panel color"
+  },
+  "recognizedLanguage": {
+    "message": "Recognized language"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "speechAssistantForSite": {
+    "message": "Site"
+  },
+  "speechAssistantForSiteTitle": {
+    "message": "Speech Assistant"
+  },
+  "speechAssistantForSiteLangTitle": {
+    "message": "Language of recognition:"
+  },
+  "enabled": {
+    "message": "Enabled"
+  },
+  "disabled": {
+    "message": "Disabled"
+  }
+}
