@@ -1,19 +1,22 @@
 /* Popup container */
 .saInformerPopup {
     position: relative;
-    /*display: inline-block;*/
     display: block !important;
     cursor: pointer;
+    margin-bottom: 5px;
 }
+
 /* The actual popup (appears on top) */
 .saInformerPopup .saInformerPopupText {
     visibility: hidden;
-    width: 160px;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+    width: auto;
     background-color: #555;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 8px 0;
+    padding: 10px;
     position: absolute;
     z-index: 10000;
     bottom: 125%;
@@ -36,36 +39,55 @@
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
 .saInformerPopup .show {
     visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
 }
+
 .saInformerPopupText span {
     display: inline-block;
 }
+
 .saInformerPopupText .saInformerPopupConfidence {
     display: none;
-    border-top: 1px solid white;
     padding: 5px 0;
+    border: 1px solid #fff;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
 }
-.saInformerPopupText .saInformerPopupConfidence.show  {
+
+.saInformerPopupText .saInformerPopupConfidence.show {
+    visibility: inherit;
     display: inline-block;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
+    background: crimson;
+    border: 1px solid;
+    padding: 6px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
 }
+
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
+
 .saInformerPopupText.bottom {
     bottom: auto;
-    /*top: -12px;*/
 }
+
 .saInformerPopup .saInformerPopupText.bottom::before {
     content: "";
     position: absolute;
@@ -76,6 +98,7 @@
     top: -10px;
     border-color: transparent transparent rgb(85, 85, 85);
 }
-.saInformerPopup .saInformerPopupText.bottom::after{
+
+.saInformerPopup .saInformerPopupText.bottom::after {
     display: none;
 }

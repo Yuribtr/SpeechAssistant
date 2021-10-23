@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
     }
 });
 
-function toggleButton( iconPath ){
+function toggleButton(iconPath) {
     chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
         chrome.browserAction.setIcon({tabId: tabs[0].id, path: iconPath});
         consoleLog('Icon changed to ' + iconPath);
@@ -25,7 +25,7 @@ function timeStamp() {
 }
 
 function consoleLog(text) {
-    if ( isDebug )  {
+    if (isDebug) {
         console.log(timeStamp() + ' ' + text);
     }
 }

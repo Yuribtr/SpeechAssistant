@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "__MSG_extName__",
   "version": "0.1",
-  "author":"Yuribtr",
+  "author": "Yuribtr",
   "default_locale": "en",
   "web_accessible_resources": [
     "vmeter.js"
@@ -19,7 +19,9 @@
     "open_in_tab": false
   },
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": false
   },
   "browser_action": {
@@ -30,12 +32,17 @@
     "default_popup": "popup.html"
   },
   "content_scripts": [
-  {
-    "matches": [
-      "<all_urls>"
-    ],
-    "js": ["langlist.js","content.js"],
-    "css" : ["speechAssistant.css"]
-  }
-]
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "langlist.js",
+        "content.js"
+      ],
+      "css": [
+        "speechAssistant.css"
+      ]
+    }
+  ]
 }

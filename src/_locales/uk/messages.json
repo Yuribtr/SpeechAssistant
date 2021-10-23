@@ -1,0 +1,70 @@
+{
+  "extName": {
+    "message": "Голосовий помічник",
+    "description": "Назва розширення."
+  },
+  "extTitle": {
+    "message": "Голосовий помічник - розпізнавання голосу",
+    "description": "Підказка, яка буде показана при наведенні на кнопку розширення."
+  },
+  "optionsSaved": {
+    "message": "Налаштування збережені!"
+  },
+  "microphoneOn": {
+    "message": "Мікрофон включений"
+  },
+  "lowQuality": {
+    "message": "Низька якість розпізнавання!"
+  },
+  "errNoSpeech": {
+    "message": "Мова не розпізнана"
+  },
+  "errAborted": {
+    "message": "Розпізнавання було скасовано"
+  },
+  "errAudioCapture": {
+    "message": "Не вдалося записати звук"
+  },
+  "errNetwork": {
+    "message": "Помилка роботи з мережею"
+  },
+  "errNotAllowed": {
+    "message": "У браузері заборонено використання мікрофона"
+  },
+  "errServiceNotAllowed": {
+    "message": "Сервіс розпізнання мови не працює"
+  },
+  "errBadGrammar": {
+    "message": "Граматична помилка"
+  },
+  "errLanguageNotSupported": {
+    "message": "Вибрана мова розпізнання не підтримується"
+  },
+  "speechAssistantOptions": {
+    "message": "Налаштування голосового помічника"
+  },
+  "warningPanelColor": {
+    "message": "Колір панелі попередження"
+  },
+  "recognizedLanguage": {
+    "message": "Мова розпізнавання"
+  },
+  "save": {
+    "message": "Зберегти"
+  },
+  "speechAssistantForSite": {
+    "message": "Сайт"
+  },
+  "speechAssistantForSiteTitle": {
+    "message": "Голосовий Помічник"
+  },
+  "speechAssistantForSiteLangTitle": {
+    "message": "Мова розпізнавання"
+  },
+  "enabled": {
+    "message": "Включений"
+  },
+  "disabled": {
+    "message": "Виключений"
+  }
+} 
