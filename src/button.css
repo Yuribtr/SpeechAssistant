@@ -1,0 +1,16 @@
+.btn {
+    border: 2px solid #1fb610;
+    background-color: #1fb610;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    transition-duration: 0.4s;
+}
+
+.success:hover {
+    background-color: white;
+    color: green;
+}

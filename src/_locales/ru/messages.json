@@ -8,7 +8,7 @@
     "description": "Подсказка, показіваемая при наведении на кнопку расширения."
   },
   "optionsSaved": {
-    "message": "Настройки сохранены!"
+    "message": "Настройки сохранены! Перезагрузите страницы где используете Голосовой помощник."
   },
   "microphoneOn": {
     "message": "Микрофон включен"
@@ -43,6 +43,9 @@
   "speechAssistantOptions": {
     "message": "Настройки голосового помощника"
   },
+  "speechAssistantOptionsHeader": {
+    "message": "Настройки Speech Assistant"
+  },
   "warningPanelColor": {
     "message": "Цвет панели предупреждения"
   },
@@ -62,9 +65,12 @@
     "message": "Язык распознавания"
   },
   "enabled": {
-    "message": "Включен"
+    "message": "включен"
   },
   "disabled": {
-    "message": "Выключен"
+    "message": "выключен"
+  },
+  "enableDebug": {
+    "message": "Включить отладку"
   }
 }

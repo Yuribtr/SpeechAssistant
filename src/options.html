@@ -2,35 +2,84 @@
 <html>
 <meta charset="utf-8">
 <head><title id="speechAssistantOptions">Speech Assistant options</title></head>
+<link rel="stylesheet" href="switch.css" type="text/css">
+<link rel="stylesheet" href="button.css" type="text/css">
 <style>
-    .section {
+    body {
+        background: #fffed2;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .containerGrid {
+        min-width: 300px;
+        text-align: center;
         padding: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .containerGrid div:nth-child(odd) {
+        color: #565656;
+        text-align: right;
+        padding: 10px 5px;
+    }
+
+    .containerGrid div:nth-child(even) {
+        margin: 5px;
+        text-align: left;
+        padding: 0 5px;
+    }
+
+    select {
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    #color option {
+        color: white;
     }
 
     #status {
         color: green;
     }
+
+    .section {
+        margin-top: 20px;
+    }
 </style>
 <body>
-
-<div class="section">
+<h1 id="speechAssistantOptionsHeader">Speech Assistant options</h1>
+<div class="containerGrid">
     <div id="warningPanelColor">Warning panel color:</div>
-    <select id="color">
-        <option value="DarkOrchid" style="background: DarkOrchid;">DarkOrchid</option>
-        <option value="ForestGreen" style="background: ForestGreen;">ForestGreen</option>
-        <option value="RoyalBlue" style="background: RoyalBlue;">RoyalBlue</option>
-    </select>
-</div>
+    <div>
+        <select id="color">
+            <option value="DarkOrchid" style="background: DarkOrchid;">DarkOrchid</option>
+            <option value="ForestGreen" style="background: ForestGreen;">ForestGreen</option>
+            <option value="RoyalBlue" style="background: RoyalBlue;">RoyalBlue</option>
+        </select>
+    </div>
 
-<div class="section">
     <div id="recognizedLanguage">Recognized language:</div>
-    <select id="select_language">
-    </select>&nbsp;&nbsp; <select id="select_dialect">
-</select>
+    <div>
+        <select id="select_language">
+        </select>&nbsp;&nbsp; <select id="select_dialect">
+    </select>
+    </div>
+
+    <div id="enableDebug">Enable debug</div>
+    <div>
+        <label class="switch">
+            <input id="debugSwitch" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
 </div>
 
 <div class="section">
-    <button id="save">Save</button>&nbsp;&nbsp;<span id="status"></span>
+    <button id="save" class="btn success">Save</button>
+    <div id="status"></div>
 </div>
 
 <script src="langlist.js"></script>

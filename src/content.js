@@ -1,7 +1,7 @@
 let context = null;
 let vMeterWorkletNode = null;
 let inputs, index, activeInput, buffer;
-let isDebug = true;
+let isDebug = false;
 let isStopped = true;
 let isStopRequested = false;
 let isStartRequested = false;
@@ -49,8 +49,14 @@ consoleLog("Extension loaded at " + host);
 chrome.storage.sync.get([
     "favoriteColor",
     "recognitionLang",
+    "isDebug",
     host
 ], function (items) {
+    if (typeof items.isDebug === "undefined") {
+        items.isDebug = false;
+    }
+    isDebug = items.isDebug;
+
     if (typeof items.favoriteColor === "undefined") {
         items.favoriteColor = "DarkOrchid";
     }
