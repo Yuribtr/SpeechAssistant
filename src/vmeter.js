@@ -1,4 +1,5 @@
-let isDebug = true;
+// this is only for init, further isDebug will be replaced by global var from content.js
+let isDebug = false;
 
 class VMonitorProcessor extends AudioWorkletProcessor {
 

@@ -1,26 +1,34 @@
 function save_options() {
     chrome.storage.sync.set({
         favoriteColor: document.getElementById("color").value,
-        recognitionLang: select_language.dataset.encoding
+        recognitionLang: select_language.dataset.encoding,
+        isDebug: document.getElementById("debugSwitch").checked
     }, function () {
         // Update status to let user know options were saved.
         let status = document.getElementById("status");
         status.textContent = chrome.i18n.getMessage("optionsSaved");
         setTimeout(function () {
             status.textContent = "";
-        }, 750);
+        }, 5000);
     });
 }
 
 function restore_options() {
     chrome.storage.sync.get([
         "favoriteColor",
-        "recognitionLang"
+        "recognitionLang",
+        "isDebug"
     ], function (items) {
+        if (typeof items.isDebug === "undefined") {
+            items.isDebug = false;
+        }
+        document.getElementById("debugSwitch").checked = items.isDebug;
+
         if (typeof items.favoriteColor === "undefined") {
             items.favoriteColor = "DarkOrchid";
         }
         document.getElementById("color").value = items.favoriteColor;
+
 
         if (typeof items.recognitionLang === "undefined") {
             //check, if default browser language is in list of supported SpeechRecognition languages
@@ -41,9 +49,11 @@ document.getElementById("select_dialect").addEventListener("change", updateEncod
 document.addEventListener("DOMContentLoaded", restore_options);
 document.getElementById("save").addEventListener("click", save_options);
 document.getElementById("speechAssistantOptions").innerHTML = chrome.i18n.getMessage("speechAssistantOptions");
+document.getElementById("speechAssistantOptionsHeader").innerHTML = chrome.i18n.getMessage("speechAssistantOptionsHeader");
 document.getElementById("warningPanelColor").innerHTML = chrome.i18n.getMessage("warningPanelColor");
 document.getElementById("recognizedLanguage").innerHTML = chrome.i18n.getMessage("recognizedLanguage");
 document.getElementById("save").innerHTML = chrome.i18n.getMessage("save");
+document.getElementById("enableDebug").innerHTML = chrome.i18n.getMessage("enableDebug");
 
 function initLanguages(encoding) {
 

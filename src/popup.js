@@ -20,7 +20,7 @@ function restore_options() {
         //console.log("callback for " + window.host + " with value " + items[window.host]);
         isEnabled = items[window.host] === 1 ? 1 : 0;
         //console.log("found " + items[window.host]);
-        switchBtn.style.borderStyle = isEnabled ? "inset" : "groove";
+        switchBtn.checked = isEnabled;
         //console.log("isEnabled " + isEnabled);
         document.getElementById("speechAssistantOptions").innerHTML = chrome.i18n.getMessage("speechAssistantOptions");
         document.getElementById("speechAssistantForSiteTitle").innerHTML = chrome.i18n.getMessage("speechAssistantForSiteTitle") + ":";
@@ -43,7 +43,7 @@ function restore_options() {
         }
 
         document.getElementById("speechAssistantForSiteLang").innerHTML = items.recognitionLang;
-        document.getElementById("switchSA").innerHTML = chrome.i18n.getMessage(isEnabled ? "enabled" : "disabled");
+        document.getElementById("switchStatus").innerHTML = chrome.i18n.getMessage(isEnabled ? "enabled" : "disabled");
     });
 }
 

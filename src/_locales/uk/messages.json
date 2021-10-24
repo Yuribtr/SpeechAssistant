@@ -8,7 +8,7 @@
     "description": "Підказка, яка буде показана при наведенні на кнопку розширення."
   },
   "optionsSaved": {
-    "message": "Налаштування збережені!"
+    "message": "Налаштування збережені! Перезавантажте сторінкі де використовуєте Голосовий помічник."
   },
   "microphoneOn": {
     "message": "Мікрофон включений"
@@ -43,6 +43,9 @@
   "speechAssistantOptions": {
     "message": "Налаштування голосового помічника"
   },
+  "speechAssistantOptionsHeader": {
+    "message": "Налаштування Speech Assistant"
+  },
   "warningPanelColor": {
     "message": "Колір панелі попередження"
   },
@@ -62,9 +65,12 @@
     "message": "Мова розпізнавання"
   },
   "enabled": {
-    "message": "Включений"
+    "message": "включений"
   },
   "disabled": {
-    "message": "Виключений"
+    "message": "вимкнений"
+  },
+  "enableDebug": {
+    "message": "Увімкнути відладку"
   }
 } 

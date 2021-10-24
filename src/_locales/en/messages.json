@@ -8,7 +8,7 @@
     "description": "Hint, that showed when hovering extension button."
   },
   "optionsSaved": {
-    "message": "Options saved!"
+    "message": "Options saved! Reload pages where you using the Voice Assistant."
   },
   "microphoneOn": {
     "message": "Microphone On"
@@ -43,6 +43,9 @@
   "speechAssistantOptions": {
     "message": "Speech Assistant options"
   },
+  "speechAssistantOptionsHeader": {
+    "message": "Speech Assistant options"
+  },
   "warningPanelColor": {
     "message": "Warning panel color"
   },
@@ -62,9 +65,12 @@
     "message": "Language of recognition:"
   },
   "enabled": {
-    "message": "Enabled"
+    "message": "enabled"
   },
   "disabled": {
-    "message": "Disabled"
+    "message": "disabled"
+  },
+  "enableDebug": {
+    "message": "Enable debug"
   }
 }

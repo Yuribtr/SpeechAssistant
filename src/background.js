@@ -1,4 +1,4 @@
-let isDebug = true;
+let isDebug = false;
 
 // Listen for messages from the content
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
