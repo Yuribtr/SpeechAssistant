@@ -1,4 +1,3 @@
-// this is only for init, further isDebug will be replaced by global var from content.js
 let isDebug = false;
 
 class VMonitorProcessor extends AudioWorkletProcessor {
@@ -51,7 +50,7 @@ class VMonitorProcessor extends AudioWorkletProcessor {
             //converting to decibels
             this._volumeDB = Math.round(20 * Math.log10(this._volume));
             this.port.postMessage({
-                message: "volume is " + this._volume
+                message: "volume is " + this._volumeDB + " dB"
             });
             this._counter = 0;
         } else {

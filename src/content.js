@@ -174,6 +174,7 @@ function start() {
         informerPopupText.style.background = backColor;
         informerPopupConfidence.style.background = backErrorColor;
         isStopRequested = isStartRequested = false;
+        startVMeter().then(r => consoleLog("Speech recognition service has started"));
         consoleLog("Speech recognition service has started");
     };
 
@@ -198,6 +199,7 @@ function start() {
         if ((lastError !== null) && (lastError !== "no-speech")) {
             informerPopupText.style.background = backErrorColor;
         }
+        stopVMeter()
     };
 
     recognition.onspeechend = function () {
@@ -236,7 +238,7 @@ function start() {
                 isStopRequested = false;
                 buffer = "";
                 //context.resume();
-                startVMeter();
+                // startVMeter();
                 recognition.start();
             }
             //if we moves from another input, let"s schedule new start
@@ -252,7 +254,7 @@ function start() {
                 isStartRequested = false;
                 isStopRequested = true;
                 window.activeInput = null;
-                stopVMeter();
+                // stopVMeter();
                 recognition.stop();
             }
         }
@@ -340,7 +342,6 @@ class VMeterWorkletNode extends AudioWorkletNode {
 async function startVMeter() {
     consoleLog("VMeter starting");
     const processorURL = chrome.runtime.getURL("vmeter.js");
-    //todo: check if we need to recreate AudioContext
     if (!context) {
         context = new AudioContext();
     }
@@ -353,10 +354,10 @@ async function startVMeter() {
 }
 
 async function stopVMeter() {
+    //TODO fix problem of volume meter during fast toggling between HTML inputs
     consoleLog("VMeter stopping");
-    if (vMeterWorkletNode !== null) {
+    if (vMeterWorkletNode) {
         await vMeterWorkletNode.doStop();
-        //todo: check if we need to assign null for destroy
         vMeterWorkletNode = null;
     }
 }
