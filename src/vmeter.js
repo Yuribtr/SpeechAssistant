@@ -1,4 +1,4 @@
-let isDebug = false;
+let isDebug = true;
 
 class VMonitorProcessor extends AudioWorkletProcessor {
 
@@ -24,13 +24,17 @@ class VMonitorProcessor extends AudioWorkletProcessor {
     }
 
     handleMessage(event) {
-        consoleLog("AudioWorkletProcessor received message: " + event.data.message);
+        consoleLog("VMonitorProcessor received message: " + event.data.message);
         if (event.data.message === "stopMonitoring") {
             this._enabled = false;
+            consoleLog("VMonitorProcessor stopped to work");
         }
     }
 
     process(inputs, outputs, parameters) {
+        if (!this._enabled) {
+            return false;
+        }
         // By default, the node has single input and output
         //we use the first one
         const input = inputs[0];
