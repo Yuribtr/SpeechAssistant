@@ -1,11 +1,10 @@
 {
   "manifest_version": 2,
   "name": "__MSG_extName__",
-  "version": "0.1",
+  "version": "1.0",
   "author": "Yuribtr",
   "default_locale": "en",
   "web_accessible_resources": [
-    "vmeter.js"
   ],
   "icons": {
     "19": "icon_19_off.png"
