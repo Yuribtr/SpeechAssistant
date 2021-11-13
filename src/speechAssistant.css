@@ -102,3 +102,13 @@
 .saInformerPopup .saInformerPopupText.bottom::after {
     display: none;
 }
+
+@media (prefers-color-scheme: dark) {
+    .saInformerPopup .saInformerPopupText {
+        border: 1px solid black;
+    }
+
+    .saInformerPopup .saInformerPopupText:after {
+        border: 1px solid black;
+    }
+}

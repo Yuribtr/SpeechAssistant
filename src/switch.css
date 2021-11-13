@@ -59,3 +59,13 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+@media (prefers-color-scheme: dark) {
+    .slider {
+        border: 1px solid black;
+    }
+
+    .slider.round:before {
+        border: 1px solid black;
+    }
+}
