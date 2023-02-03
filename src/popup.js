@@ -49,7 +49,7 @@ function restore_options() {
 
 function getLangName(encoding) {
     let result = "";
-    //langsList is declared in langlist.js, which run before, due to conditions in popup.html
+    //langList is declared in langlist.js, which run before, due to conditions in popup.html
     for (let i = 0; i < langsList.length; i++) {
         result = getLangNameFromList(encoding, langsList[i]);
         if (result !== "") {

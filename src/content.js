@@ -12,6 +12,7 @@ let informerPopup = document.createElement("div");
 let informerPopupText = document.createElement("span");
 let informerPopupMessage = document.createElement("span");
 let informerPopupConfidence = document.createElement("span");
+let detectedInputs = "input[type=text], input[type=password], input[type=email], input[type=search], input[type=url], input[type=tel], textarea"
 
 informerPopup.className = "saInformerPopup";
 informerPopupText.className = "saInformerPopupText";
@@ -243,10 +244,10 @@ function onInputBlur() {
 
 function bindEventsToInputs() {
     //Extension loaded after DOM ready, so we can iterate all inputs
-    inputs = document.querySelectorAll("input[type=text], input[type=password], input[type=email], input[type=search], input[type=url], input[type=tel], textarea");
+    inputs = document.querySelectorAll(detectedInputs);
     for (index = 0; index < inputs.length; ++index) {
-        inputs[index].onfocus = onInputFocus;
-        inputs[index].onblur = onInputBlur;
+        inputs[index].addEventListener("focus", onInputFocus);
+        inputs[index].addEventListener("blur", onInputBlur);
     }
 }
 
@@ -286,11 +287,11 @@ function doStopRecognize() {
         activeInput.blur();
     }
     //Extension loaded after DOM ready, so we can iterate all inputs
-    inputs = document.querySelectorAll("input[type=text], input[type=password], input[type=email], input[type=search], input[type=url], input[type=tel], textarea");
+    inputs = document.querySelectorAll(detectedInputs);
     for (index = 0; index < inputs.length; ++index) {
         //discarding all events
-        inputs[index].onfocus = null;
-        inputs[index].onblur = null;
+        inputs[index].removeEventListener("focus", onInputFocus);
+        inputs[index].removeEventListener("blur", onInputBlur);
     }
     //changing icon at Chrome panel
     sendMessageToBackground("recognizeStopped");

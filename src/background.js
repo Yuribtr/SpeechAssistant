@@ -19,7 +19,7 @@ function toggleButton(iconPath) {
     chrome.tabs.query(
         {"active": true, "lastFocusedWindow": true},
         function (tabs) {
-            chrome.browserAction.setIcon({tabId: tabs[0].id, path: iconPath});
+            chrome.action.setIcon({tabId: tabs[0].id, path: iconPath});
             consoleLog("Icon changed to " + iconPath);
         });
 }

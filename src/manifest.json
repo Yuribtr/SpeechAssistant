@@ -1,7 +1,7 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "__MSG_extName__",
-  "version": "1.0",
+  "version": "2.0",
   "author": "Yuribtr",
   "default_locale": "en",
   "web_accessible_resources": [
@@ -18,12 +18,10 @@
     "open_in_tab": true
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
+    "service_worker": "background.js",
+    "type": "module"
   },
-  "browser_action": {
+  "action": {
     "default_title": "__MSG_extTitle__",
     "default_icon": {
       "19": "icon_19_off.png"
